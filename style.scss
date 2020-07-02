@@ -13,9 +13,8 @@ $Dark-Grayish-Red: hsl(0, 6%, 24%);
 
 //Gradients
 
-//Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-//Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
-
+//background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+//background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 //Typography
 
@@ -25,3 +24,95 @@ $font-family: 'Josefin Sans',
 sans-serif;
 
 //Weights: 300, 400, 600
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 800px;
+    font-family: $font-family;
+    font-size: 16px;
+
+    .right {
+        float: right;
+        width: 40%;
+        height: 100%;
+
+        background-image: url("./images/hero-desktop.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .left {
+        float: left;
+        width: 60%;
+        height: 100%;
+        padding: 60px 160px;
+
+        background-image: url("./images/bg-pattern-desktop.svg");
+        background-size: 100% 100%;
+        background-position: center;
+
+        img {
+            height: 40px;
+        }
+
+        h1:first-of-type {
+            margin-top: 140px;
+            font-size: 4rem;
+            font-weight: 300;
+            color: $Desaturated-Red;
+        }
+
+        h1:nth-of-type(2),
+        h1:last-of-type {
+            font-size: 4rem;
+            font-weight: 600;
+            color: $Dark-Grayish-Red;
+        }
+
+        p {
+            margin: 40px 0;
+            font-weight: 400;
+            color: $Desaturated-Red;
+            line-height: 30px;
+        }
+
+        input {
+            width: 100%;
+            height: 60px;
+            border: 1px solid $Desaturated-Red;
+            border-radius: 30px;
+            padding: 20px 30px;
+            opacity: 0.6;
+
+            &::placeholder {
+                color: $Desaturated-Red;
+                font-family: $font-family;
+                font-size: 1rem;
+                font-weight: 400;
+                opacity: 0.6;
+            }
+        }
+
+        .button {
+            width: 100px;
+            height: 60px;
+            background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+            border-radius: 30px;
+            padding: 20px 40px;
+            
+            position: relative;
+            top: -60px;
+            float: right;
+            
+            img {
+                width: 15px;
+                height: 20px;
+            }
+        }
+    }
+}
