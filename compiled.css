@@ -9,11 +9,15 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
 }
+body .logo {
+  display: none;
+}
 body .right {
   float: right;
   width: 40%;
   height: 100%;
   background-image: url("./images/hero-desktop.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -21,7 +25,7 @@ body .left {
   float: left;
   width: 60%;
   height: 100%;
-  padding: 60px 160px;
+  padding: 60px 12%;
   background-image: url("./images/bg-pattern-desktop.svg");
   background-size: 100% 100%;
   background-position: center;
@@ -67,6 +71,7 @@ body .left .button {
   height: 60px;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border-radius: 30px;
+  border: none;
   padding: 20px 40px;
   position: relative;
   top: -60px;
@@ -75,6 +80,43 @@ body .left .button {
 body .left .button img {
   width: 15px;
   height: 20px;
+}
+
+@media (max-width: 1100px) {
+  body .logo {
+    display: block;
+    margin: 30px;
+    height: 20px;
+  }
+  body .right {
+    float: none;
+    width: 100%;
+    height: 450px;
+    background-position: top;
+  }
+  body .left {
+    float: none;
+    width: 100%;
+    padding: 70px 30px;
+    text-align: center;
+  }
+  body .left img {
+    display: none;
+  }
+  body .left h1:first-of-type {
+    margin: 0;
+  }
+  body .left h1 {
+    font-size: 3rem;
+    margin: 10px;
+  }
+  body .left .button {
+    width: 80px;
+    padding: 20px 32px;
+  }
+  body .left .button img {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=compiled.css.map */
